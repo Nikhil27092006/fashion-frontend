@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Fashion Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="products.js" defer></script>
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a class="active" href="shop.html">Shop</a>
+                <a href="pricing.html">Pricing Plan</a>
+                <a href="about.html">About Us</a>
+            </div>
+
+            <div class="nav-center">
+                <input id="searchInput" type="text" placeholder="Search products..." onkeyup="filterProducts()">
+            </div>
+
+            <div class="nav-right">
+                <img src="assets/img/logo.png" class="logo">
+                <a href="cart.html" class="cart-icon">
+                    🛒 <span id="cartCount">0</span>
+                </a>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- FILTERS BAR -->
+    <section class="filter-bar">
+
+        <!-- Category -->
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="all">All Categories</option>
+            <option value="T-shirts">T-shirts</option>
+            <option value="Hoodies">Hoodies</option>
+        </select>
+
+        <!-- Price -->
+        <input type="range" id="priceRange" min="100" max="1500" value="1500" oninput="updatePriceText(); filterProducts();">
+        <span id="priceText">Max: ₹1500</span>
+
+        <!-- Sorting -->
+        <select id="sortFilter" onchange="filterProducts()">
+            <option value="default">Sort By</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="az">A → Z</option>
+        </select>
+
+    </section>
+
+
+    <!-- PRODUCT GRID -->
+    <section id="productGrid" class="product-grid"></section>
+
+
+    <!-- FOOTER -->
+    <footer id="footer"></footer>
+
+</body>
+</html>

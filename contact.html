@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="nav">
+        <div class="nav-left">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="pricing.html">Pricing Plan</a>
+            <a href="about.html">About Us</a>
+        </div>
+
+        <div class="nav-right">
+            <img src="assets/img/logo.png" class="logo">
+        </div>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <h1>Contact Us</h1>
+
+    <div class="contact-grid">
+
+        <div class="contact-info">
+            <h2>We’d love to hear from you!</h2>
+            <p>Email: support@fashionstore.com</p>
+            <p>Phone: +91 9876543210</p>
+            <p>Address: Nagpur, Maharashtra</p>
+
+            <h3>Store Timings</h3>
+            <p>Mon–Sat: 10 AM – 8 PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+
+        <form class="contact-form" onsubmit="alert('Message sent!'); return false;">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+<footer id="footer"></footer>
+
+</body>
+</html>
